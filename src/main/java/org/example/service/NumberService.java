@@ -10,6 +10,4 @@ public interface NumberService {
     void saveNumber(Number number);
 
     Number getNumberById(int id);
-
-    void deleteNumberById(int id);
 }

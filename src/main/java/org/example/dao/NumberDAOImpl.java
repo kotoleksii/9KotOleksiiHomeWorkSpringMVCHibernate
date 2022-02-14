@@ -26,7 +26,8 @@ public class NumberDAOImpl implements NumberDAO {
 
     @Override
     public void saveNumber(Number number) {
-
+        Session session = sessionFactory.getCurrentSession();
+        session.saveOrUpdate(number);
     }
 
     @Override
@@ -34,11 +35,5 @@ public class NumberDAOImpl implements NumberDAO {
         Session session = sessionFactory.getCurrentSession();
         Number number = session.get(Number.class, id);
         return number;
-    }
-
-    @Override
-    public void deleteNumberById(int id) {
-        Session session = sessionFactory.getCurrentSession();
-        session.createQuery("delete from Number where id =" + id).executeUpdate();
     }
 }

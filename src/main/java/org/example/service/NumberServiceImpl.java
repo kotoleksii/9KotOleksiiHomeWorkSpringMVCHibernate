@@ -22,16 +22,11 @@ public class NumberServiceImpl implements NumberService {
 
     @Override
     public void saveNumber(Number number) {
-
+        numberDAO.saveNumber(number);
     }
 
     @Override
     public Number getNumberById(int id) {
-        return null;
-    }
-
-    @Override
-    public void deleteNumberById(int id) {
-
+        return numberDAO.getNumberById(id);
     }
 }

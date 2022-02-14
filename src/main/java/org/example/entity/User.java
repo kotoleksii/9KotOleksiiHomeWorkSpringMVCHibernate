@@ -15,7 +15,7 @@ public class User {
     private String name;
 
     @OneToMany(cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
-    @JoinColumn(name = "users_id", nullable = false)
+    @JoinColumn(name = "users_id", referencedColumnName = "id", nullable = false)
     private List<Number> numbers;
 
     public User() {

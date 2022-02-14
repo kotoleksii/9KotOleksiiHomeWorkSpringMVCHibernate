@@ -7,12 +7,14 @@
 <body>
 <table border="">
     <tr>
+        <th>id</th>
         <th>Name</th>
         <th>Phone</th>
     </tr>
     <c:forEach var="user" items="${users}">
         <c:forEach var="number" items="${numbers}">
             <tr>
+                <td>${user.id}</td>
                 <td>${user.name}</td>
                 <td>${number.phone}</td>
             </tr>
@@ -21,5 +23,6 @@
 
 
 </table>
+<input type="button" value="add" onclick="window.location.href = 'addNewContact'">
 </body>
 </html>
