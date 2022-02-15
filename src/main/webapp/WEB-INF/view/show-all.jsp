@@ -2,27 +2,27 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>All contacts</title>
 </head>
 <body>
-<table border="">
-    <tr>
-        <th>id</th>
-        <th>Name</th>
-        <th>Phone</th>
-    </tr>
+<header>
+    <jsp:include page="/WEB-INF/view/header.jsp"/>
+</header>
+<table>
     <c:forEach var="user" items="${users}">
+        <tr>
+            <td>${user.name}</td>
+        </tr>
         <c:forEach var="number" items="${numbers}">
             <tr>
-                <td>${user.id}</td>
-                <td>${user.name}</td>
+                <td></td>
                 <td>${number.phone}</td>
             </tr>
         </c:forEach>
     </c:forEach>
-
-
 </table>
-<input type="button" value="add" onclick="window.location.href = 'addNewContact'">
 </body>
 </html>
+
+
+

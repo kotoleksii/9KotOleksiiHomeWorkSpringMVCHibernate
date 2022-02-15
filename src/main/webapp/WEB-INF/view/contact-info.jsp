@@ -5,7 +5,7 @@
     <title>Title</title>
 </head>
 <body>
-<form:form action="saveUser" modelAttribute="user">
+<form:form action="saveContact" modelAttribute="user">
     <form:hidden path="id"/>
     Name<form:input path="name"/>
     <br>
